@@ -16,7 +16,7 @@ variable "resource_group_name" {
 variable "public_network_enabled" {
   description = "Is the Data Factory visible to the public network?"
   type        = bool
-  default     = true
+  default     = false
 }
 
 variable "managed_virtual_network_enabled" {
