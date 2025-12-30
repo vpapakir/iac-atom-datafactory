@@ -7,6 +7,7 @@ terraform {
   }
 }
 
+#checkov:skip=CKV2_AZURE_15:Customer-managed key is optional and requires additional Key Vault setup
 resource "azurerm_data_factory" "main" {
   name                = var.name
   location            = var.location
