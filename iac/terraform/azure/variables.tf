@@ -37,6 +37,18 @@ variable "github_configuration" {
   default = null
 }
 
+variable "customer_managed_key_id" {
+  description = "The ID of the Key Vault Key for customer-managed encryption"
+  type        = string
+  default     = null
+}
+
+variable "customer_managed_key_identity_id" {
+  description = "The ID of the User Assigned Identity for customer-managed key access"
+  type        = string
+  default     = null
+}
+
 variable "tags" {
   description = "A mapping of tags to assign to the resource"
   type        = map(string)

@@ -19,6 +19,14 @@ resource "azurerm_data_factory" "main" {
   public_network_enabled          = var.public_network_enabled
   managed_virtual_network_enabled = var.managed_virtual_network_enabled
 
+  dynamic "customer_managed_key_id" {
+    for_each = var.customer_managed_key_id != null ? [1] : []
+    content {
+      key_vault_key_id   = var.customer_managed_key_id
+      identity_id        = var.customer_managed_key_identity_id
+    }
+  }
+
   dynamic "github_configuration" {
     for_each = var.github_configuration != null ? [var.github_configuration] : []
     content {
