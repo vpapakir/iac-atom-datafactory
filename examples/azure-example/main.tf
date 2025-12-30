@@ -35,8 +35,8 @@ module "data_factory" {
 
 output "data_factory_details" {
   value = {
-    id                  = module.data_factory.data_factory_id
-    name                = module.data_factory.data_factory_name
-    identity_principal  = module.data_factory.identity_principal_id
+    id                 = module.data_factory.data_factory_id
+    name               = module.data_factory.data_factory_name
+    identity_principal = module.data_factory.identity_principal_id
   }
 }
