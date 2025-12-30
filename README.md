@@ -1,6 +1,6 @@
 # iac-atom-datafactory
 
-A cloud-specific Terraform atom for provisioning Azure Data Factory instances as part of an atom-molecule-template infrastructure architecture.
+A cloud-specific Terraform atom for provisioning Azure Data Factory instances as part of an atom-molecule-template infrastructure architecture...
 
 ## Traffic Light System
 
