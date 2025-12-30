@@ -1,0 +1,21 @@
+name: Data Factory Pipeline
+
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  push:
+    branches: ['*']
+  pull_request:
+    branches: [main]
+
+jobs:
+  traffic-light-pipeline:
+    uses: vpapakir/iac-pipeline-templates/.github/workflows/traffic-light-pipeline.yml@v0.0.15
+    with:
+      ci-tool: 'gh_actions'
+      default-cloud-provider: 'azure'
+    secrets:
+      terraform-cloud-token: ${{ secrets.TF_CLOUD_TOKEN }}
+      github-token: ${{ secrets.GITHUB_TOKEN }}
